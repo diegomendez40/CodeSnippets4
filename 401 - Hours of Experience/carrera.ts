@@ -1,8 +1,8 @@
-export class Curso{
+export class Carrera{
     constructor(public nombre: string,
+                public duracion: number,
                 public horas: number,
-                public tech: string,
-                public entity: string,
+                public universidad: string,
                 public anio: number)
     {
         

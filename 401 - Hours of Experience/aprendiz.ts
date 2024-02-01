@@ -1,28 +1,30 @@
 import {Curso} from './curso.js';
+import {Carrera} from './carrera.js';
+import {Trabajo} from './trabajo.js';
 
 export enum NivelEducativo{
     BACHILLERATO = "Bachillerato",
     UNIVERSITARIO = "Universitario",
-    POSGRADO = "Posgrado"
+    POSGRADO = "Posgrado",
+    DOCTOR = "Doctor"
 }
 
 export class Aprendiz{
 
-    constructor(public nombres: string, public apellidos: string, public avatar: string, public edad: number, public nivelEducativo: NivelEducativo, public cursos: Curso[])
+    constructor(public nombres: string,
+                public apellidos: string,
+                public avatar: string,
+                public edad: number,
+                public nivelEducativo: NivelEducativo,
+                public cursos: Curso[],
+                public carreras: Carrera[],
+                public trabajos: Trabajo[])
     {
 
     }
 
     public darCursosCertificados():number{
-        let totalCursosC: number = 0;
-        for(let index = 0; index < this.cursos.length; index++)
-        {
-            let curso: Curso = this.cursos[index];
-            if(curso.certificado)
-            {
-                totalCursosC+=1;
-            }
-        }
+        let totalCursosC: number = this.cursos.length;
         return totalCursosC;
     }
 }

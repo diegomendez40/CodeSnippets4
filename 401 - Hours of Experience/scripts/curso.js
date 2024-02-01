@@ -1,9 +1,9 @@
 var Curso = /** @class */ (function () {
-    function Curso(nombre, horas, calificacion, certificado, anio) {
+    function Curso(nombre, horas, tech, entity, anio) {
         this.nombre = nombre;
         this.horas = horas;
-        this.calificacion = calificacion;
-        this.certificado = certificado;
+        this.tech = tech;
+        this.entity = entity;
         this.anio = anio;
     }
     return Curso;

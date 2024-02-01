@@ -3,24 +3,21 @@ export var NivelEducativo;
     NivelEducativo["BACHILLERATO"] = "Bachillerato";
     NivelEducativo["UNIVERSITARIO"] = "Universitario";
     NivelEducativo["POSGRADO"] = "Posgrado";
+    NivelEducativo["DOCTOR"] = "Doctor";
 })(NivelEducativo || (NivelEducativo = {}));
 var Aprendiz = /** @class */ (function () {
-    function Aprendiz(nombres, apellidos, avatar, edad, nivelEducativo, cursos) {
+    function Aprendiz(nombres, apellidos, avatar, edad, nivelEducativo, cursos, carreras, trabajos) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.avatar = avatar;
         this.edad = edad;
         this.nivelEducativo = nivelEducativo;
         this.cursos = cursos;
+        this.carreras = carreras;
+        this.trabajos = trabajos;
     }
     Aprendiz.prototype.darCursosCertificados = function () {
-        var totalCursosC = 0;
-        for (var index = 0; index < this.cursos.length; index++) {
-            var curso = this.cursos[index];
-            if (curso.certificado) {
-                totalCursosC += 1;
-            }
-        }
+        var totalCursosC = this.cursos.length;
         return totalCursosC;
     };
     return Aprendiz;
