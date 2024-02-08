@@ -13,3 +13,5 @@ Select a code snippet from the list and go to the respective subfolder.
 
 ### 401 - Hours of Experience (TypeScript)
 A very simple front-end code to visualize a person's total hours of experience in learning hard stuff and solving complex problems.
+
+![Visualizing a person's total hours of experience in learning hard stuff and solving complex problems](401%20-%20Hours%20of%20Experience/assets/screenshot_HorasResolviendoProblemas.png)
